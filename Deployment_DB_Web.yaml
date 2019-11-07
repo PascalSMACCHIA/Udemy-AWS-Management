@@ -2,7 +2,7 @@
   name: Deploy a web application
   hosts: WebServers
   roles:
-          #- python
-          #- mysql_db
-          #    - Get-GitHub-Repository
+    - python
+    - mysql_db
+    - Get-GitHub-Repository
     - flask_web
