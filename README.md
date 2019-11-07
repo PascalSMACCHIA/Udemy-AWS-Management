@@ -31,6 +31,7 @@ ansible-playbook playbook.yml --vault-password-file vault.pass
 Edit the pass.yml file and create the keys global constants
 
 Create the variables ec2_access_key and ec2_secret_key and set the values gathered after user creation (IAM).
+
 <PRE>
 ansible-vault edit group_vars/all/pass.yml 
 Vault password:
@@ -87,9 +88,9 @@ It's necessary to provision 3 VMs, including 2 VMs with Mysql Database, Python a
 
 Directory Structure:
 <PRE>
- ├── Deployment_DB_Web.yaml
+➜
+├── Deployment_DB_Web.yaml
 ├── Deployment_HaProxy.yaml
-├── ec2.py
 ├── group_vars
 │   └── all
 │       └── pass.yml
@@ -145,8 +146,6 @@ Directory Structure:
     └── python
         └── tasks
             └── main.yml
-
-
  </PRE>
 
-## 
+## Create Database, Python and Flask server
