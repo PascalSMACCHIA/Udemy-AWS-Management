@@ -67,7 +67,7 @@ or
 
 <PRE>
 ansible-playbook  playbook.yaml --vault-password-file ~/.ssh/vault.pass
-<PRE>
+</PRE>
 
 
 ## Create the instance
