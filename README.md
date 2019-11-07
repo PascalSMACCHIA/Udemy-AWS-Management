@@ -88,7 +88,7 @@ It's necessary to provision 3 VMs, including 2 VMs with Mysql Database, Python a
 
 Directory Structure:
 <PRE>
-➜
+➜  AWS_Ansible tree
 ├── Deployment_DB_Web.yaml
 ├── Deployment_HaProxy.yaml
 ├── group_vars
@@ -149,3 +149,63 @@ Directory Structure:
  </PRE>
 
 ## Create Database, Python and Flask server
+
+Launch the playbook "Deployment_DB_Web.yaml" to initialise the environment. 
+
+The variables are in the files vars_hosts/web[1-2]. The playbook use the roles:
+* python
+* mysql_db
+* Get-GitHub-Repository (get the app.py on the GitHub Repository)
+* flask_web
+
+the command is:
+<PRE>
+ansible-playbook -i inventory Deployment_DB_Web.yaml  --vault-password-file ~/.ssh/vault.pass
+</PRE>
+
+## Create the HaProxy service
+
+The loadbalancing is create with role "geerlingguy.haproxy".
+
+The variables are on the host_vars/haproxy01.yaml to configure the HaProxy service
+
+<PRE>
+ haproxy_backend_servers:
+    - name: app1
+      address:  172.31.20.93:5000
+    - name: app2
+      address:  172.31.29.122:5000
+</PRE>
+
+## Dynamic Inventory
+
+For AWS, the ec2.py file is the program wich be used to create the dynamic inventory.
+
+<PRE>
+ansible -i ec2.py all -m ping -u ubuntu  --key-file ~/.ssh/my_aws --vault-password-file   ~/.ssh/vault.pass
+</PRE>
+
+<PRE>
+ --> REsult:
+ 18.224.136.48 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+13.58.34.207 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+18.223.102.138 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+</PRE>
