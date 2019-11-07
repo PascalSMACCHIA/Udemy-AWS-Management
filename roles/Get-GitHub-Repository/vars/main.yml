@@ -2,6 +2,6 @@
 # vars file for Get-GitHub-Repository
 PROTOCOL: https
 FQDN: github.com
-SUB_FOLDER: PascalSMACCHIA/Udemy-AWS-Management
+SUB_FOLDER: PascalSMACCHIA/Udemy-SourceCode
 SRC_INSTALL: .
      
