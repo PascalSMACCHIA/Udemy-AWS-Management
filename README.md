@@ -82,7 +82,7 @@ ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 ansible-playbook playbook.yml --ask-vault-pass
 </PRE>
 
-# Enable the services on hte VMs
+# Enable the services on the VMs
 
 It's necessary to provision 3 VMs, including 2 VMs with Mysql Database, Python and Flask and the last one HaProxy for the balancer. 
 
