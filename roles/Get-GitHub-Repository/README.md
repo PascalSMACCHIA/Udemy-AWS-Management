@@ -19,7 +19,7 @@ The variables will be used by defaut are:
 PROTOCOL: https
 FQDN: github.com
 SUB_FOLDER: PascalSMACCHIA/Udemy-SourceCode.git
-SRC_INSTALL: .
+SRC_INSTALL: ./SourceCode
 </PRE>
 
 Dependencies
