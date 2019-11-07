@@ -1,0 +1,8 @@
+ansible_become: true
+ansible_become_method: sudo
+ansible_sudo_user: root
+haproxy_backend_servers:
+    - name: app1
+      address:  172.31.20.93:5000
+    - name: app2
+      address:  172.31.29.122:5000

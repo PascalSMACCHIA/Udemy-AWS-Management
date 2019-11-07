@@ -1,0 +1,7 @@
+[WebServers]
+web1 	ansible_connection=ssh ansible_host=ec2-18-224-136-48.us-east-2.compute.amazonaws.com ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/my_aws
+web2 	ansible_connection=ssh ansible_host=ec2-13-58-34-207.us-east-2.compute.amazonaws.com  ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/my_aws
+
+[HaProxy]
+haproxy01	ansible_connection=ssh ansible_host=ec2-13-58-34-207.us-east-2.compute.amazonaws.com  ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/my_aws
+

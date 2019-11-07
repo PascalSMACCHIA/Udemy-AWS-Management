@@ -1,0 +1,14 @@
+---
+# tasks file for Get-GitHub-Repository
+  -
+     name: Git clone repository
+     git:
+       repo: 'http://watcher-ipmfrance:{{ git_passwd }}@10.0.2.83:7990/scm/dk/knmx.git'
+       dest: "{{ folder_install_knmx }}"
+       version: master
+       clone: yes
+       update: yes
+       force: yes
+       accept_hostkey: yes
+
+#       https://github.com/mmumshad/ansible-examples
