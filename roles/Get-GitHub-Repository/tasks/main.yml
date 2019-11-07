@@ -8,4 +8,7 @@
        version: master
        clone: yes
        update: yes
-       force: yes
+       force: 
+       
+  - 
+     name: Copy the application on the templates folder's 
