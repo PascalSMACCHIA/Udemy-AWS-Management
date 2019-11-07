@@ -1,5 +1,11 @@
 ---
 # tasks file for Get-GitHub-Repository
+  
+  -
+     name: Create Directory
+     file:
+      path: "{{ SRC_INSTALL }}"
+      state: directory
   -
      name: Git clone repository
      git:
@@ -9,6 +15,3 @@
        clone: yes
        update: yes
        force: 
-       
-  - 
-     name: Copy the application on the templates folder's 

@@ -8,7 +8,7 @@
        - flask-mysql
 
     - name: Copy web-server code
-      copy: src=./templates/app.py dest=/opt/app.py
+      copy: src=./SourceCode/app.py dest=/opt/app.py remote_src=yes
 
     - name: Start web-application
       shell: FLASK_APP=/opt/app.py nohup flask run --host=0.0.0.0 &
