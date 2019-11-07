@@ -1,7 +1,7 @@
 # Udemy-ansible-advanced
 
 
-These playbook and roles will be used to create a new Instances on AWS Infrastructure and same time enable the services learnt  on the course "Ansible Advanced".
+These playbooks and roles will be used to create a new Instances on AWS Infrastructure and same time enable the services learnt  on the course "Ansible Advanced".
 
 # AWS instances
 
