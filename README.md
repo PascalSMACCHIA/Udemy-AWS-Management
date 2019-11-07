@@ -179,7 +179,7 @@ The variables are on the host_vars/haproxy01.yaml to configure the HaProxy servi
 
 ## Dynamic Inventory
 
-For AWS, the ec2.py file is the program wich be used to create the dynamic inventory.
+For AWS, the ec2.py file is the program wich be used to create the dynamic inventory. the file is on this [link](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.py) too
 
 <PRE>
 ansible -i ec2.py all -m ping -u ubuntu  --key-file ~/.ssh/my_aws --vault-password-file   ~/.ssh/vault.pass
